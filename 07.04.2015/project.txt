@@ -1,0 +1,69 @@
+﻿APP MODEL STRUCTURE:
+
+current state{
+	id(int)
+}
+
+reaction {
+	moodId(int), actionId(int), text(string)
+}
+
+action {
+	id(int), label(string)
+}
+
+mood {
+	id(int), label(string)
+}
+
+moodTransition {
+	actionId(int), currentId(int), nextId(int), priority(int)
+}
+
+
+=================================================
+
+AGENTS:
+
+Cat
+	MODEL:
+	currentMoodId
+	
+	MSG IN: action(id)
+	
+	MSG OUT: displayReaction(id)
+	
+	MSG OUT: displayMood(id)
+	
+
+=================================================
+
+AGENT ENVIRONMENTS:
+AppEnv
+	dataStorage
+	view
+	
+Animals //futureproof
+	
+AppView
+
+	MSG: Action
+	id(int), label(int)
+	
+	MSG: Reaction
+	id(int), label(int), text(string)
+
+
+=================================================
+
+APP COMPONENTS:
+
+DataStorage
+	getMoodId(actionId, moodId)
+	getReactionId(actionId, moodId)
+	getNextMood(currentActionId, moodId)
+	
+View
+	displayReaction(id)
+
+

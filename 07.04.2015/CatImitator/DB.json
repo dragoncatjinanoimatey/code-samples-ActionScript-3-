@@ -1,0 +1,46 @@
+﻿{
+
+"action": [
+	{"id":0, "label":"Поиграть"}
+	,{"id":1, "label":"Накормить"}
+	,{"id":2, "label":"Погладить"}
+	,{"id":3, "label":"Дать пинка"}
+]
+
+,"mood": [
+	{"id":0, "label":"Плохое"}
+	,{"id":1, "label":"Хорошее"}
+	,{"id":2, "label":"Отличное"}
+]
+
+,"defaultMoodId":"2"
+
+,"moodTransition": [
+	{"actionId":1, "currentId":0, "nextId":1}
+
+	,{"actionId":0, "currentId":1, "nextId":2}
+	,{"actionId":1, "currentId":1, "nextId":2}
+	,{"actionId":2, "currentId":1, "nextId":2}
+	,{"actionId":3, "currentId":1, "nextId":0}
+
+	,{"actionId":3, "currentId":2, "nextId":0}
+]
+
+,"reaction": [
+	{"moodId":0, "actionId":0, "text":"Сидит на месте"}
+	,{"moodId":0, "actionId":1, "text":"Все съедает, но если в это время подойти - поцарапает"}
+	,{"moodId":0, "actionId":2, "text":"Царапает"}
+	,{"moodId":0, "actionId":3, "text":"Прыгает и кусает за правое ухо"}
+	
+	,{"moodId":1, "actionId":0, "text":"Медленно бегает за мячиком"}
+	,{"moodId":1, "actionId":1, "text":"Быстро все съедает"}
+	,{"moodId":1, "actionId":2, "text":"Мурлычет"}
+	,{"moodId":1, "actionId":3, "text":"Убегает на ковер и писает"}
+	
+	,{"moodId":2, "actionId":0, "text":"Носится, как угорелая"}
+	,{"moodId":2, "actionId":1, "text":"Быстро все съедает"}
+	,{"moodId":2, "actionId":2, "text":"Мурлычет и виляет хвостом"}
+	,{"moodId":2, "actionId":3, "text":"Убегает в другую комнату"}
+]
+
+}

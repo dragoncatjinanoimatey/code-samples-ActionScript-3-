@@ -1,0 +1,32 @@
+﻿проверка приложения:
+1 открыть CatImitator\bin\CatImitator.swf
+2 нажать на кнопку "Открыть json файл с данными приложения"
+3 выбрать файл CatImitator\DB.json
+
+если с файлом все ОК в окне справа появятся кнопки действий. если приложению не удастся распарсить json оно сообщит об ошибке.
+
+
+исходный код:
+
+парсер json файла
+CatImitator\src\cat_imitator\d\dp\DPAppData.as
+
+модель приложения:
+CatImitator\src\cat_imitator\d\a\DUApp.as
+
+сущности:
+CatImitator\src\cat_imitator\d\app\DUAction.as
+CatImitator\src\cat_imitator\d\app\DUMood.as
+CatImitator\src\cat_imitator\d\app\DUMoodTransition.as
+CatImitator\src\cat_imitator\d\app\DUReaction.as
+
+выполнение действия - отображение реакции и смены и/или отображения текущего настроения
+CatImitator\src\cat_imitator\c\ma\app\animal\AnimalCat.as
+
+
+компиляция приложения:
+FlashDevelop
+
+
+в этом файле набросок проекта:
+project.txt
